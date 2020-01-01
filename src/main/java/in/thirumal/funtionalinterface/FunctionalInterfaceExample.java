@@ -1,7 +1,7 @@
 /**
  * 
  */
-package funtionalinterface;
+package in.thirumal.funtionalinterface;
 
 /**
  * @author thirumal
