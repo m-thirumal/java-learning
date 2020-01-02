@@ -1,0 +1,3 @@
+module require {
+	requires export;
+}
