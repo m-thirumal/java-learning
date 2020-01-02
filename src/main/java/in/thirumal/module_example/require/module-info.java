@@ -1,3 +1,0 @@
-module require {
-	requires export;
-}
