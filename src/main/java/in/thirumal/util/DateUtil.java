@@ -26,4 +26,8 @@ public class DateUtil {
 		}
 		return LocalDate.from(date.toInstant().atZone(ZoneId.systemDefault()));
 	}
+	
+	public static Date add(Date date, int month) {
+		return null;
+	}
 }
