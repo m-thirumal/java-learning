@@ -5,14 +5,15 @@ import java.util.concurrent.TimeUnit;
 public class LoopTaskA implements Runnable {
 
 	private static int count = 0;
-	private int id;
+	private int instanceNumber;
 	
 	@Override
 	public void run() {
-		System.out.println("##### <TASK-" + id + "> STARTING #####");
+		String threadName = Thread.currentThread().getName();
+		System.out.println("##### [-" + threadName + "] <"+ instanceNumber + "> STARTING #####");
 		
 		for (int i=10; i>0; i--) {
-			System.out.println("<TASK-" + id + ">TICK TICK " + i);
+			System.out.println("[-"  + threadName + "] <"+ instanceNumber + ">TICK TICK " + i);
 			
 			try {
 				TimeUnit.MILLISECONDS.sleep((long)(Math.random() * 1000));
@@ -22,11 +23,11 @@ public class LoopTaskA implements Runnable {
 			}
 		}
 		
-		System.out.println("***** <TASK-" + id + "> DONE ******");
+		System.out.println("*****["  + threadName + "] <"+ instanceNumber + "> DONE ******");
 	}
 	
 	
 	public LoopTaskA() {
-		this.id = ++count;
+		this.instanceNumber = ++count;
 	}
 }

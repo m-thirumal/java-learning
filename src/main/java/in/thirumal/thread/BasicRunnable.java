@@ -26,7 +26,7 @@ public class BasicRunnable implements Runnable {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Thread t = new Thread(new BasicRunnable());
+		Thread t = new Thread(new BasicRunnable(), "RunnableThread");
 		if (t.isAlive()) {
 			System.out.println("Thread is alive before start");
 		}
@@ -34,6 +34,7 @@ public class BasicRunnable implements Runnable {
 		if (t.isAlive()) {
 			System.out.println("Thread alive for 10 seconds");
 		}
+		System.out.println("Thread name: " + t.getName());
 	}
 
 }
