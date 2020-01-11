@@ -16,7 +16,7 @@ public class CachedThreadPool {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ExecutorService execService = Executors.newCachedThreadPool(); //Creates number of thread as many task submitted to the execute 
+		ExecutorService execService = Executors.newCachedThreadPool(new NamedThreadFactory()); //Creates number of thread as many task submitted to the execute 
 		
 		execService.execute(new LoopTaskA());
 		execService.execute(new LoopTaskA());

@@ -17,7 +17,7 @@ public class FixedThreadPool {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Main thread starts here...");
-		ExecutorService executorService = Executors.newFixedThreadPool(2); //Only 2 thread at a time
+		ExecutorService executorService = Executors.newFixedThreadPool(2, new NamedThreadFactory()); //Only 2 thread at a time
 		executorService.execute(new LoopTaskA());
 		executorService.execute(new LoopTaskA());
 		executorService.execute(new LoopTaskA());
