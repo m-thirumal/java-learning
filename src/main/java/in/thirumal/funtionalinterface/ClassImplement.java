@@ -13,7 +13,7 @@ public class ClassImplement implements FunctionalInterface2{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ClassImplement c = new ClassImplement();
+		FunctionalInterface2 c = new ClassImplement();
 		System.out.println(c.defaultMethod1());
 
 	}
